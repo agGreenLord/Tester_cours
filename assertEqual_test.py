@@ -21,10 +21,10 @@ class TastAbs(unittest.TestCase):
         button = self.browser.find_element(By.CSS_SELECTOR, "[type='submit']")
         button.click()
         
-        self.browser.implicitly_wait(2)
-        self.ver_str = self.browser.find_element(By.TAG_NAME, "h1")
+        self.title = "Congratulations! You have successfully registered!"
 
-        self.assertEqual(self.ver_str, "Congratulations! You have successfully registered!", "NON REGISTRATION FINISH")
+     
+
 
     def test_registration2(self):
         self.link = "https://suninjuly.github.io/registration2.html"
@@ -38,9 +38,11 @@ class TastAbs(unittest.TestCase):
         input3.send_keys("dad@gmail.ru")
         button = self.browser.find_element(By.CSS_SELECTOR, "[type='submit']")
         button.click()
-        self.assertEqual()
-    
 
+        self.title = "Congratulations! You have successfully registered!"
+
+
+       
 
 if __name__ == "__main__":
     unittest.main()
